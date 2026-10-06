@@ -2,7 +2,7 @@
 
 **Developer: GENESES C. ABARCAR**
 
-A professional Windows event audio console with two music decks, sound-effect banks, automatic playlist fades and independent headphone preview.
+A professional Windows DJ console with two decks, colored scrolling waveforms, automatic BPM and key detection, tempo with key lock, SYNC, a three-band kill EQ and filter, FX pads, beat loops, mix recording, sound-effect banks, Automix and independent headphone preview.
 
 <img src="assets/app-icon.png" width="112" alt="GenAssist DJ System Pro icon">
 
@@ -12,7 +12,7 @@ A professional Windows event audio console with two music decks, sound-effect ba
 
 Get the Windows x64 ZIP from the [latest official release](https://github.com/EduFilesPH/genassist-dj-system-pro-releases/releases/latest).
 
-Version **1.4.0** adds local AI Stem pads for Vocal, Instruments, Bass, Kick and Hi-hat. It retains Hot Cues, Loop and Sampler pads, virtual music-library folders, the live-playback buzzing fix and in-app updates. Existing effects do not need to be imported again.
+Version **2.0.0** turns the console into a pro DJ workstation. It adds waveforms, automatic BPM/key analysis, tempo with key lock, SYNC, a kill EQ and filter, FX pads, beat loops and mix recording. It retains Hot Cues, Sampler and local AI Stems pads, virtual folders and in-app updates. Existing library data, cue points and effects are kept.
 
 1. Extract the entire ZIP to a folder.
 2. Open the extracted folder and double-click **GenAssist DJ System Pro.exe**. Keep the DLLs and runtime files alongside it.
@@ -21,13 +21,27 @@ Version **1.4.0** adds local AI Stem pads for Vocal, Instruments, Bass, Kick and
 The download includes its .NET runtime. Application data is stored in `%LOCALAPPDATA%\GenAssist\DJSystemPro`.
 
 
-## DJ controls and folders
+## Pro DJ console
 
-**Set Cue** saves the current position; **CUE** pauses and returns there. Drag or scroll a jog wheel to seek; Shift gives finer movement. Choose **Hot Cues**, **Loop**, **Sampler**, or **Stems** above either deck's eight performance pads; each deck remembers its mode after restart.
+The layout follows professional DJ software. Stacked scrolling waveforms run across the top, deck A is on the left, the mixer is in the center and deck B is on the right. The library and sound effects sit below.
+
+- **Waveforms:** colored by band (bass blue, mids teal, highs white), with beat lines, cue markers, the loop region and a red playhead. Each deck also has an overview of the whole song; click or drag it to move through the song. Scroll over the waveforms or use **+ / −** to zoom. The strip grows on taller screens.
+- **Analysis:** loading a song detects its BPM, beat grid and key in the background, shown in Camelot and musical notation, for example **8A · Am**. **Analyze** in the library processes selected songs, or every song not yet analyzed. BPM and Key columns sort the library, and results are cached and redone if a file changes. Tempos are reported between 78 and 185 BPM, so half- or double-time music can read at the other octave; SYNC handles both. Detection is automatic and can be wrong on songs without a steady beat.
+- **Tempo:** each tempo fader sits on the console's outer edge. Down is faster, as on DJ hardware; double-click to reset. **±8%** cycles through ±8, ±16 and ±50%. **KEY** (key lock, on by default) keeps the musical key when the tempo changes; turn it off for vinyl-style pitch.
+- **SYNC:** matches tempo to the other deck (allowing half/double time) and lines up the beats when both decks play. Both SYNC buttons light while the tempos match.
+- **Jog wheels:** while paused, drag to seek or scroll for one second. While playing, dragging bends the tempo to nudge beats into line.
+- **Mixer:** each channel has GAIN (±12 dB), HIGH/MID/LOW EQ and a FILTER knob. Turning an EQ knob fully left kills that band; turning right boosts up to +6 dB. The filter is a low-pass to the left and a high-pass to the right. Level meters, channel faders, the crossfader and the MASTER knob complete the mixer. With every control centered, the audio is unchanged.
+- **REC:** records the master output to a 16-bit 48 kHz WAV in `Music\GenAssist Recordings`. Right-click it to open or change the folder.
+- **Automix** (formerly Auto playlist) plays the queue with crossfades.
+
+## Deck pads and folders
+
+**Set Cue** saves the current position; **CUE** pauses and returns there. Choose **Hot Cues**, **Loop**, **Sampler**, **Stems** or **FX** above either deck's eight performance pads; each deck remembers its mode after restart.
 
 - **Hot Cues:** click an empty pad 1–8 to save a position, then click again to jump and play. Shift-click or right-click clears it. Existing four-cue tracks keep their saved positions.
-- **Loop:** **In/Out** marks a manual loop; **Exit** continues forward and **Reloop** recalls it. **½ Loop / 2× Loop** resize it, and **1s / 2s / 4s** loop that many seconds from the current position. Click the active length to exit. These loops use seconds and manual positions, without automatic beatmatching or beat quantization.
+- **Loop:** **In/Out** marks a manual loop; **Exit** continues forward and **Reloop** recalls it. **½ Loop / 2× Loop** resize it. Once the BPM is detected, the last three pads are **2 / 4 / 8-beat** auto loops that start on the nearest beat. Before analysis, they loop 1, 2 or 4 seconds. Click the active length to exit.
 - **Sampler:** click to play/restart your existing bank sounds over music. Shift-click or right-click stops a sample. **‹ / ›** pages through eight sounds independently per deck. Bank selection, sound imports, labels and volume are in **Sound effects**. Both panels share the same sounds; sampler use and mode switching keep automatic music running.
+- **FX:** **Echo ½**, **Echo 1**, **Reverb**, **Flanger**, **Gate** and **Crush** follow the song's tempo and can be combined. Echo and reverb tails ring out after you switch them off, even after Stop. **Brake** slows the deck to a vinyl stop, and **FX Off** clears every deck effect.
 - **Stems:** load an ordinary song, choose **Prepare**, and let the app separate and cache it locally while playback continues. Click Vocal, Instruments, Bass, Kick or Hi-hat to mute/unmute; Shift-click or right-click solos a part. Acapella, Instrumental and Reset provide common mixes. The first use automatically downloads the optional CPU engine (242 MB) and models (about 522 MB); no Python installation is needed and no music is uploaded. Preparation takes time and the five-part cache uses about 115 MB per minute. All-on playback uses the original samples. Separation quality varies by song; Instruments includes remaining percussion. See [the stem guide and model terms](STEMS.md), including the DrumSep weights' undocumented commercial-use license.
 
 Choose **All music**, then **+ New folder** to create a folder. Select a folder first to create a subfolder. Ctrl-click or Shift-click songs, then drag them into a folder or use **Organize -> Add to folder**. Right-click a folder to rename or remove it. Parent folders include songs from their subfolders; **Unfiled** shows songs outside all folders. Removing a folder or its song references keeps songs in All music and keeps audio files in place. Folders and cue points are saved after closing the app.
@@ -40,13 +54,17 @@ Versions before **1.1.2** need one manual download to gain this feature: close t
 
 ## Features
 
+- Pro DJ layout with stacked scrolling waveforms, beat grids and per-deck overview waveforms.
+- Automatic BPM, beat grid and key (Camelot) detection with sortable library columns.
+- Tempo faders (±8/16/50%) with key lock, SYNC with beat alignment and jog-wheel pitch bend.
+- Per-channel gain, HIGH/MID/LOW kill EQ, low/high-pass filter, level meters and crossfader.
+- One-click WAV recording of the master mix.
 - Two independent decks with jog seeking, Cue/Set Cue and eight saved hot cues.
-- Eight performance pads per deck with Hot Cues, manual/preset Loop, Sampler and local AI Stems modes.
+- Eight performance pads per deck with Hot Cues, beat/manual Loop, Sampler, local AI Stems and FX modes.
 - Sound-effect pads with overlapping playback, per-pad stop and shortcuts.
 - Virtual music folders and subfolders with multi-song drag/drop and Organize menus. Audio files stay in their original locations.
 - Music library, favorites, queue and saved playlists.
-- Central mixer with vertical A/B channel faders, measured signal meters, master volume and crossfader.
-- Automatic playlist playback with adjustable fades.
+- Automix queue playback with adjustable crossfades.
 - Separate speaker and headphone output devices.
 - Optional Jamendo discovery and licensed downloads using your own client ID.
 - Clean dark console and native Windows app icon.
@@ -54,4 +72,4 @@ Versions before **1.1.2** need one manual download to gain this feature: close t
 
 This public repository contains release documentation and packaged downloads. Application source is maintained privately. Third-party notices and required third-party source/license files accompany the Windows download. Original DJ FX PRO audio is not redistributed.
 
-The Windows binary is currently unsigned. Headphone isolation requires two separately addressable playback devices. Live Jamendo use requires your own client ID.
+The Windows binary is currently unsigned. Microphone input, MIDI controllers, video and MP3 recording are not included. Headphone isolation requires two separately addressable playback devices. Live Jamendo use requires your own client ID.

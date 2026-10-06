@@ -1,5 +1,17 @@
 # Release notes
 
+## 2.0.0 — 7 October 2026
+
+- Added a pro DJ layout. Stacked colored scrolling waveforms with beat lines, cue markers and loop region run across the top, with per-deck overview waveforms (click or drag to move through the song) and zoom.
+- Added automatic BPM, beat grid and key detection, shown on the decks and as sortable BPM/Key library columns, plus **Analyze** for the library. Results are cached and refreshed when a file changes.
+- Added tempo faders (±8/16/50%), **KEY** lock and jog-wheel pitch bend while playing. **SYNC** matches tempo, including half/double time, and lines up the beats.
+- Added per-channel GAIN, HIGH/MID/LOW kill EQ and a low/high-pass FILTER. With every control centered, playback is sample-identical to 1.4.0.
+- Added an **FX** pad page: Echo ½, Echo 1, Reverb, Flanger, Gate, Crush, Brake and FX Off. Echo and reverb tails ring out after stop.
+- Loop pads become 2/4/8-beat auto loops snapped to the beat grid once the BPM is known.
+- Added **REC** for 16-bit 48 kHz WAV recordings of the master mix. Auto playlist is now called **Automix**.
+
+On 1.1.2 or later, use **Check for updates → Update now → Restart and install**. Library data, cue points, effects and settings are preserved. The Windows package remains unsigned.
+
 ## 1.1.3 — 6 October 2026
 
 - Fixed buzzing and distortion during live Windows playback, including a single deck. Previous audio samples were being left in the playback buffer and accumulated into later audio.

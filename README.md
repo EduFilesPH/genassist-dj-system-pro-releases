@@ -12,7 +12,7 @@ A professional Windows event audio console with two music decks, sound-effect ba
 
 Get the Windows x64 ZIP from the [latest official release](https://github.com/EduFilesPH/genassist-dj-system-pro-releases/releases/latest).
 
-Version **1.1.1** fixes treble loss during sample-rate conversion so music and effects retain their original high-frequency detail. Existing effects do not need to be imported again.
+Version **1.1.2** adds in-app downloads, installation and restart. It also includes the 1.1.1 audio-fidelity correction. Existing effects do not need to be imported again.
 
 1. Extract the entire ZIP to a folder.
 2. Open the extracted folder and double-click **GenAssist DJ System Pro.exe**. Keep the DLLs and runtime files alongside it.
@@ -22,7 +22,9 @@ The download includes its .NET runtime. Application data is stored in `%LOCALAPP
 
 ## Updates
 
-Use **Check for updates** in the app to check this repository for a newer stable version. The app displays the result and lets you open the official release page. Download and installation are manual. Close the app before replacing files; your library and settings remain in local app data. Update checks send no account credentials or music-library data.
+Use **Check for updates**, then **Update now** to download and verify a newer version while audio continues playing. When ready, choose **Restart and install**. The app saves your library, stops playback, installs and restarts with playback stopped. If the new app cannot confirm startup, the updater restores and restarts the previous version. Your library, imported effects and settings remain in local app data. Update checks send no account credentials or music-library data.
+
+Versions before **1.1.2** need one manual download to gain this feature: close the old app, extract the entire new ZIP to a new folder and run its executable. In-app installation requires the complete Windows package in a writable folder, available staging space and no other copy running from that folder. Unsupported folders provide a manual-download fallback. Previous app folders and staged packages are retained for recovery and can be removed after confirming the new version works.
 
 ## Features
 
@@ -33,6 +35,7 @@ Use **Check for updates** in the app to check this repository for a newer stable
 - Separate speaker and headphone output devices.
 - Optional Jamendo discovery and licensed downloads using your own client ID.
 - Clean dark console and native Windows app icon.
+- In-app update downloads, verification, installation and restart with startup rollback.
 
 This public repository contains release documentation and packaged downloads. Application source is maintained privately. Third-party notices and required third-party source/license files accompany the Windows download. Original DJ FX PRO audio is not redistributed.
 

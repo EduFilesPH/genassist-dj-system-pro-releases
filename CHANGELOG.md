@@ -1,5 +1,15 @@
 # Release notes
 
+## 1.1.2 — 6 October 2026
+
+- Added **Update now** with download progress and cancellation. Downloads run while music continues playing.
+- Added **Restart and install** to save the library, stop playback, install and restart inside the app. Playback stays stopped after restart.
+- Added official GitHub SHA256 verification, a complete file inventory, executable-version checks and validation of archive paths and sizes.
+- Added startup confirmation and automatic rollback/restart when the new version cannot finish starting. Previous app folders are retained for recovery; personal files in the app folder are preserved.
+- Added manual-download fallback for unsupported folders/packages, plus Windows file-lock retries and checks for other running copies.
+
+**Install this version manually once if you are using 1.1.1 or earlier.** Close the old app, extract the complete ZIP to a new folder and run its executable. Future supported releases can then update from inside the app. Library data and effects remain in local app data. The Windows package remains unsigned.
+
 ## 1.1.1 — 6 October 2026
 
 - Fixed loss of high-frequency detail when converting music and effects to the 48 kHz playback mix. The previous converter could make original 44.1 kHz effects sound dull or muffled.

@@ -12,7 +12,7 @@ A professional Windows event audio console with two music decks, sound-effect ba
 
 Get the Windows x64 ZIP from the [latest official release](https://github.com/EduFilesPH/genassist-dj-system-pro-releases/releases/latest).
 
-Version **1.3.0** adds eight performance pads per deck with Hot Cues, Loop and Sampler modes. It retains virtual music-library folders, the live-playback buzzing fix and in-app updates. Existing effects do not need to be imported again.
+Version **1.4.0** adds local AI Stem pads for Vocal, Instruments, Bass, Kick and Hi-hat. It retains Hot Cues, Loop and Sampler pads, virtual music-library folders, the live-playback buzzing fix and in-app updates. Existing effects do not need to be imported again.
 
 1. Extract the entire ZIP to a folder.
 2. Open the extracted folder and double-click **GenAssist DJ System Pro.exe**. Keep the DLLs and runtime files alongside it.
@@ -23,11 +23,12 @@ The download includes its .NET runtime. Application data is stored in `%LOCALAPP
 
 ## DJ controls and folders
 
-**Set Cue** saves the current position; **CUE** pauses and returns there. Drag or scroll a jog wheel to seek; Shift gives finer movement. Choose **Hot Cues**, **Loop**, or **Sampler** above either deck's eight performance pads; each deck remembers its mode after restart.
+**Set Cue** saves the current position; **CUE** pauses and returns there. Drag or scroll a jog wheel to seek; Shift gives finer movement. Choose **Hot Cues**, **Loop**, **Sampler**, or **Stems** above either deck's eight performance pads; each deck remembers its mode after restart.
 
 - **Hot Cues:** click an empty pad 1–8 to save a position, then click again to jump and play. Shift-click or right-click clears it. Existing four-cue tracks keep their saved positions.
 - **Loop:** **In/Out** marks a manual loop; **Exit** continues forward and **Reloop** recalls it. **½ Loop / 2× Loop** resize it, and **1s / 2s / 4s** loop that many seconds from the current position. Click the active length to exit. These loops use seconds and manual positions, without automatic beatmatching or beat quantization.
 - **Sampler:** click to play/restart your existing bank sounds over music. Shift-click or right-click stops a sample. **‹ / ›** pages through eight sounds independently per deck. Bank selection, sound imports, labels and volume are in **Sound effects**. Both panels share the same sounds; sampler use and mode switching keep automatic music running.
+- **Stems:** load an ordinary song, choose **Prepare**, and let the app separate and cache it locally while playback continues. Click Vocal, Instruments, Bass, Kick or Hi-hat to mute/unmute; Shift-click or right-click solos a part. Acapella, Instrumental and Reset provide common mixes. The first use automatically downloads the optional CPU engine (242 MB) and models (about 522 MB); no Python installation is needed and no music is uploaded. Preparation takes time and the five-part cache uses about 115 MB per minute. All-on playback uses the original samples. Separation quality varies by song; Instruments includes remaining percussion. See [the stem guide and model terms](STEMS.md), including the DrumSep weights' undocumented commercial-use license.
 
 Choose **All music**, then **+ New folder** to create a folder. Select a folder first to create a subfolder. Ctrl-click or Shift-click songs, then drag them into a folder or use **Organize -> Add to folder**. Right-click a folder to rename or remove it. Parent folders include songs from their subfolders; **Unfiled** shows songs outside all folders. Removing a folder or its song references keeps songs in All music and keeps audio files in place. Folders and cue points are saved after closing the app.
 
@@ -40,7 +41,7 @@ Versions before **1.1.2** need one manual download to gain this feature: close t
 ## Features
 
 - Two independent decks with jog seeking, Cue/Set Cue and eight saved hot cues.
-- Eight performance pads per deck with Hot Cues, manual/preset Loop and Sampler modes.
+- Eight performance pads per deck with Hot Cues, manual/preset Loop, Sampler and local AI Stems modes.
 - Sound-effect pads with overlapping playback, per-pad stop and shortcuts.
 - Virtual music folders and subfolders with multi-song drag/drop and Organize menus. Audio files stay in their original locations.
 - Music library, favorites, queue and saved playlists.

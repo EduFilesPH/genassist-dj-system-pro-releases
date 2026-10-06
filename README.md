@@ -12,13 +12,20 @@ A professional Windows event audio console with two music decks, sound-effect ba
 
 Get the Windows x64 ZIP from the [latest official release](https://github.com/EduFilesPH/genassist-dj-system-pro-releases/releases/latest).
 
-Version **1.1.3** fixes buzzing and distortion during live playback in both decks, effects and headphone preview. It includes in-app downloads, installation and restart. Existing effects do not need to be imported again.
+Version **1.2.0** adds DJ-style controls and virtual music-library folders. It retains the live-playback buzzing fix from 1.1.3 and supports in-app updates. Existing effects do not need to be imported again.
 
 1. Extract the entire ZIP to a folder.
 2. Open the extracted folder and double-click **GenAssist DJ System Pro.exe**. Keep the DLLs and runtime files alongside it.
-3. Import MP3/WAV songs with **+ Files** or **+ Folder**, load deck A or B, and play. Add your own effects to the sound-effect banks.
+3. Import MP3/WAV songs with **+ Files** or **Import folder**, load deck A or B, and play. Add your own effects to the sound-effect banks.
 
 The download includes its .NET runtime. Application data is stored in `%LOCALAPPDATA%\GenAssist\DJSystemPro`.
+
+
+## DJ controls and folders
+
+**Set Cue** saves the current position; **CUE** pauses and returns there. Click an empty **Hot Cue 1-4** to save a position, then click it again to jump and play. Shift-click clears it. Drag or scroll a jog wheel to seek; Shift gives finer movement. **In/Out** marks a manual loop; **Exit** continues forward and **Reloop** recalls it. These controls use manual positions without automatic beatmatching or vinyl scratching.
+
+Choose **All music**, then **+ New folder** to create a folder. Select a folder first to create a subfolder. Ctrl-click or Shift-click songs, then drag them into a folder or use **Organize -> Add to folder**. Right-click a folder to rename or remove it. Parent folders include songs from their subfolders; **Unfiled** shows songs outside all folders. Removing a folder or its song references keeps songs in All music and keeps audio files in place. Folders and cue points are saved after closing the app.
 
 ## Updates
 
@@ -28,9 +35,11 @@ Versions before **1.1.2** need one manual download to gain this feature: close t
 
 ## Features
 
-- Two independent decks with seek, volume and crossfader controls.
+- Two independent decks with jog seeking, Cue/Set Cue, four saved hot cues and manual Loop In/Out/Exit/Reloop.
 - Sound-effect pads with overlapping playback, per-pad stop and shortcuts.
+- Virtual music folders and subfolders with multi-song drag/drop and Organize menus. Audio files stay in their original locations.
 - Music library, favorites, queue and saved playlists.
+- Central mixer with vertical A/B channel faders, measured signal meters, master volume and crossfader.
 - Automatic playlist playback with adjustable fades.
 - Separate speaker and headphone output devices.
 - Optional Jamendo discovery and licensed downloads using your own client ID.

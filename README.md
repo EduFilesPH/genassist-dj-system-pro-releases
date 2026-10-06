@@ -12,6 +12,8 @@ A professional Windows event audio console with two music decks, sound-effect ba
 
 Get the Windows x64 ZIP from the [latest official release](https://github.com/EduFilesPH/genassist-dj-system-pro-releases/releases/latest).
 
+Version **1.1.1** fixes treble loss during sample-rate conversion so music and effects retain their original high-frequency detail. Existing effects do not need to be imported again.
+
 1. Extract the entire ZIP to a folder.
 2. Open the extracted folder and double-click **GenAssist DJ System Pro.exe**. Keep the DLLs and runtime files alongside it.
 3. Import MP3/WAV songs with **+ Files** or **+ Folder**, load deck A or B, and play. Add your own effects to the sound-effect banks.

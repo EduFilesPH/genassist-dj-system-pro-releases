@@ -1,5 +1,13 @@
 # Release notes
 
+## 1.1.3 — 6 October 2026
+
+- Fixed buzzing and distortion during live Windows playback, including a single deck. Previous audio samples were being left in the playback buffer and accumulated into later audio.
+- Corrected buffer clearing for both decks, sound effects and headphone preview. Original audio files and saved volume settings are preserved.
+- Added a regression check using the same byte-backed audio buffers as Windows playback. Verified the correction with real WASAPI loopback capture of both decks against direct playback.
+
+On **1.1.2**, use **Check for updates → Update now → Restart and install**. Older versions require extracting the complete ZIP and running its executable. Existing effects do not need to be imported again. The Windows package remains unsigned.
+
 ## 1.1.2 — 6 October 2026
 
 - Added **Update now** with download progress and cancellation. Downloads run while music continues playing.

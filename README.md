@@ -12,7 +12,7 @@ A professional Windows event audio console with two music decks, sound-effect ba
 
 Get the Windows x64 ZIP from the [latest official release](https://github.com/EduFilesPH/genassist-dj-system-pro-releases/releases/latest).
 
-Version **1.1.2** adds in-app downloads, installation and restart. It also includes the 1.1.1 audio-fidelity correction. Existing effects do not need to be imported again.
+Version **1.1.3** fixes buzzing and distortion during live playback in both decks, effects and headphone preview. It includes in-app downloads, installation and restart. Existing effects do not need to be imported again.
 
 1. Extract the entire ZIP to a folder.
 2. Open the extracted folder and double-click **GenAssist DJ System Pro.exe**. Keep the DLLs and runtime files alongside it.

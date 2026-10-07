@@ -1,5 +1,13 @@
 # Release notes
 
+## 2.1.0 — 7 October 2026
+
+- Added Automix tempo matching. Each incoming song is synced to the playing one (tempo and beats, half/double time allowed) when both have a detected BPM and the change is at most 8%. After the crossfade it glides back to its own tempo at 0.4% per second, so tempos do not drift. **Match tempo** in the queue tab turns it off. Moving the deck's tempo fader during the glide hands control back to you.
+- Added drag-to-load: drop library or queue songs, or MP3/WAV files from Windows, onto a deck or its waveform to load them paused. A playing deck refuses the drop.
+- Sound-effect banks are now **groups**. Each deck's Sampler pads have their own group dropdown and keep their choice. Right-click a group dropdown to create, rename or remove groups, and right-click a sound to add it to or remove it from a group. Right-click menus now use the dark theme.
+
+On 1.1.2 or later, use **Check for updates → Update now → Restart and install**. Library data, cue points, effects and settings are preserved. The Windows package remains unsigned.
+
 ## 2.0.0 — 7 October 2026
 
 - Added a pro DJ layout. Stacked colored scrolling waveforms with beat lines, cue markers and loop region run across the top, with per-deck overview waveforms (click or drag to move through the song) and zoom.
